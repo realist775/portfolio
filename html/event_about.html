@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    src="https://kit.fontawesome.com/77c31284a3.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <link rel="stylesheet" href="../css/event_about.css" />
+  <script defer src="../script/main.js"></script>
+  <title>IALAND</title>
+<body>
+  <header>
+    <div class="container">
+      <div class="head">
+        <h1 class="logo"><a href="../html/main.html">Ialand</a></h1>
+
+        <nav class="nav-links">
+          <a href="../html/ticket.html">티켓 & 예매</a>
+          <a href="../html/attraction.html">어트랙션 & 지도</a>
+          <a href="../html/event.html">이벤트 & 공지사항</a>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle" onclick="toggleDropdown()">
+              고객센터 ▾
+            </button>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li><a href="../html/call_center.html">고객센터</a></li>
+              <li><a href="../html/ticket_option.html">티켓 옵션</a></li>
+              <li><a href="../html/event_about.html">이벤트 정보</a></li>
+              <li><a href="../html/attraction_about.html">어트랙션 정보</a></li>
+              <li><a href="../html/sign_up.html">회원가입</a></li>
+              <li><a href="../html/log_in.html">로그인</a></li>
+            </ul>
+          </div>
+        </nav>
+  
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search" />
+          <button onclick="searchNow()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="signup_login">
+          <button class="animated-button-signup">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text"><a href="sign_up.html">SING UP </a></span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+          <button class="animated-button-login">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text"><a href="sign_up.html">LOG IN </a></span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content-hero">
+      <h3>아이랜드 테마파크</h3>
+      <h2>2025 겨울 페스티벌</h2>
+      <p>겨울의 마법을 경험하세요! 잊지 못할 순간들이 기다리고 있습니다.</p>
+      <p class="date">2025.12.10 (토)</p>
+  
+      <div class="countdown">
+        <div><span id="days">00</span><p>일</p></div>
+        <div><span id="hours">00</span><p>시</p></div>
+        <div><span id="minutes">00</span><p>분</p></div>
+        <div><span id="seconds">00</span><p>초</p></div>
+      </div>
+  
+      <div class="subscribe">
+        <input type="email" placeholder="이메일">
+        <button>예매하기</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="wrap">
+
+    <section class="remember">
+      <h2 class="remember-title">이벤트 참여 시 특별한 혜택과 경품을 놓치지 마세요!</h2>
+      <p class="remember-subtitle">이번 이벤트에 참여하시면 다양한 혜택을 누릴 수 있습니다. 특별 경품도 준비되어 있으니 많은 참여 바랍니다.</p>
+      
+      <div class="remember-content">
+        <div class="remember-left">
+          <div class="benefit-box">
+            <h3 class="benefit-title">혜택 안내</h3>
+            <p class="benefit-description">참여자 전원에게 소정의 기념품을 제공합니다.</p>
+          </div>
+          <div class="prize-box">
+            <h3 class="prize-title">경품 정보</h3>
+            <p class="prize-para">추첨을 통해 다양한 경품을 제공합니다.</p>
+          </div>
+        </div>
+        
+        <div class="remember-right">
+          <figure class="event-poster">
+            <img src="../img/main/event poster1.jpg" alt="이벤트 포스터">
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="event-schedule">
+      <h2>이벤트<br><strong>일정</strong></h2>
+      <p class="para">이벤트에 대한 날짜와 시간, 장소를 확인하세요. 참여 방법과 혜택도 안내합니다.</p>
+      <div class="date-buttons">
+        <button data-date="2025-06-09">2025년 6월 9일</button>
+        <button data-date="2025-07-10">2025년 7월 10일</button>
+        <button data-date="2025-08-11">2025년 8월 11일</button>
+      </div>
+    
+      <div class="event-list" id="eventList"></div>
+    </section>
+    
+
+
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <section class="footer-row">
+        <div class="footer-col">
+          <h1>
+            <a class="footer-brand" href="main.html">Ialand</a>
+          </h1>
+          <p>© 2025 ialand. 모든 권리 보유.</p>
+        </div>
+        <div class="footer-col">
+          <h4>고객센터</h4>
+          <p><strong>전화번호</strong>: <span class="p-number">053-901-9292</span></p>
+          <p><strong>이메일</strong>: ialand@gmail.com</p>
+          <p><strong>주소</strong>: 대구광역시 동구 동대구로 102</p>
+          <p><strong>운영시간</strong>: 평일 10:00 ~ 21:00</p>
+          <p><strong>휴무</strong>: 주말 및 공휴일: 10~22:30</p>
+        </div>
+        <div class="footer-col">
+          <h4>회사 소개</h4>
+          <p>ialand 놀이공원</p>
+          <p><strong>사업자등록번호</strong>: 000-00-00000</p>
+          <p><strong>대표자명</strong>: Ale</p>
+        </div>
+        <div class="footer-col">
+          <h4>법적 고지</h4>
+          <p>개인정보처리방침</p>
+          <p>이용약관</p>
+          <label for="lang">언어 선택</label>
+          <select name="lang" id="lang" class="lang-select">
+            <option value="ko">한국어</option>
+            <option value="Eng">English</option>
+            <option value="Uz">Uzbek</option>
+          </select>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+  <button class="btn_top">TOP</button>
+
+
+
+
+
+
+
+  
+
+</body>
+</html>

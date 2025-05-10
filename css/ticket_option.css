@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  color: inherit;
+  text-decoration: 0;
+}
+ul {
+  list-style: 0;
+}
+li {
+  list-style-type: none;
+}
+figure {
+  width: fit-content;
+  height: fit-content;
+}
+img {
+  display: block;
+}
+
+#wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  height: auto;
+  align-content: center;
+  background-color: #127683;
+
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+
+}
+.head{
+  width: 100%;
+  height: 100px;
+  padding: 1rem 0;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+.logo a {
+  font-size: 32px;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: #00ffc8;
+  border-bottom: 1px solid #fff;
+  font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 200%;
+  left: -90%;
+  background-color: #e1f1e2;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  display: none;
+  width: 200px;
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.75rem 1.2rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-menu li a:hover {
+  color: #00818a;
+  border-bottom: 1px solid #fff;
+  font-weight: 700;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+
+.signup_login{
+  display: flex;
+}
+.search-box input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.95rem;
+  min-width: 180px;
+}
+
+.search-box button {
+  background-color: #979797;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.animated-button-signup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 25px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 12px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: rgb(47, 248, 255);
+  box-shadow: 0 0 0 2px rgb(47, 255, 238);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 10px;
+}
+
+.animated-button-signup svg {
+  position: absolute;
+  width: 24px;
+  fill: rgb(47, 255, 255);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-signup .arr-1 {
+  right: 16px;
+}
+
+.animated-button-signup .arr-2 {
+  left: -25%;
+}
+
+.animated-button-signup .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(47, 224, 255);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-signup .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-signup:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #f7f7f7;
+  border-radius: 12px;
+}
+
+.animated-button-signup:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button-signup:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button-signup:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button-signup:hover svg {
+  fill: #ffffff;
+}
+
+.animated-button-signup:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.animated-button-signup:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.animated-button-login {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 25px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 12px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: rgb(47, 248, 255);
+  box-shadow: 0 0 0 2px rgb(47, 255, 238);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-right: 10px;
+}
+
+.animated-button-login svg {
+  position: absolute;
+  width: 24px;
+  fill: rgb(47, 255, 255);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-login .arr-1 {
+  right: 16px;
+}
+
+.animated-button-login .arr-2 {
+  left: -25%;
+}
+
+.animated-button-login .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: rgb(44, 123, 155);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-login .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button-login:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.animated-button-login:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button-login:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button-login:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button-login:hover svg {
+  fill: #ffffff;
+}
+
+.animated-button-login:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px rgb(35, 161, 140);
+}
+
+.animated-button-login:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+
+.container_detail {
+  display: flex;
+  padding: 50px 100px;
+  max-width: 1920px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.left {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.right {
+  flex: 1;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 28px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.stars {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin: 20px 0;
+}
+
+.ticket-types button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.ticket-types button.active {
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+.ticket-types button:hover{
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+.selector {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selector select, .selector input {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+.buttons button:hover{
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+
+.buy-now {
+  background: #eee;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid transparent;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.thumbnails img.active {
+  border-color: rgb(177, 224, 240);
+}
+
+.ticket_i {
+  position: relative;
+  background: url(../img/main/main_banner\ 2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.ticket-content {
+  max-width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.ticket-content h6{
+  color: #fff;
+  font-weight: 700;
+}
+
+.ticket-content h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  margin: 30px auto;
+  color: #fff;
+} 
+
+.ticket-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+
+
+.btn-more:hover {
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+
+.btn-involved:hover {
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+.ticket_i .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.ticket-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 40px;
+}
+
+.ticket-text {
+  flex: 1;
+}
+
+.ticket-text h5 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.ticket-text h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ticket-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.ticket-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.ticket-info li {
+  margin-bottom: 10px;
+}
+
+.ticket-buttons {
+  display: flex;
+  justify-content:space-evenly;
+  gap: 16px;
+}
+
+.ticket-buttons .btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.ticket-buttons .btn:hover {
+  background-color: #24727c;
+  color: #f0f0f0;
+}
+
+.ticket-image {
+  flex: 1;
+}
+
+.ticket-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.ticket-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #292424;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.ticket-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ticket-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 30%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.ticket-card:hover {
+  transform: scale(1.05);
+  box-shadow: 20px 20px 40px rgb(192, 192, 192);
+}
+
+.ticket-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.ticket-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ticket-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.footer {
+  width: 100%;
+  background-color: #344f5c;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  width: 80%;;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-col h4{
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.footer-col p{
+  font-size: 14px;
+  line-height: 2;
+  color: #ffffff;
+}
+.footer-col strong{
+  font-weight: 700;
+}
+
+.footer-brand {
+  color: #fceb00;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.footer-brand:hover {
+  text-decoration: underline;
+}
+
+.p-number {
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+}
+
+.lang-select {
+  margin-top: 8px;
+  padding: 5px;
+  width: 120px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #215e91;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(77, 78, 76, 0.356);
+  transition: opacity 0.3s;
+  z-index: 1000;
+  display: none;
+  text-align: center;
+}
+
+.btn_top:hover {
+  background-color: #555;
+}
+
+.btn_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #215e91;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 8px rgba(77, 78, 76, 0.356);
+  transition: opacity 0.3s;
+  z-index: 1000;
+  display: none;
+  text-align: center;
+}
+
+.btn_top:hover {
+  background-color: #555;
+}
+
+
+
+
