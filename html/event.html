@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/77c31284a3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../css/event.css" />
+
+    <script src="../script/main.js"></script>
+    <title>IALAND</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="head">
+          <h1 class="logo"><a href="../html/main.html">Ialand</a></h1>
+
+          <nav class="nav-links">
+            <a href="../html/ticket.html">티켓 & 예매</a>
+            <a href="../html/attraction.html">어트랙션 & 지도</a>
+            <a href="../html/event.html">이벤트 & 공지사항</a>
+
+            <div class="dropdown">
+              <button class="dropdown-toggle" onclick="toggleDropdown()">
+                고객센터 ▾
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a href="../html/call_center.html">고객센터</a></li>
+                <li><a href="../html/ticket_option.html">티켓 옵션</a></li>
+                <li><a href="../html/../html/event_about.html">이벤트 정보</a></li>
+                <li><a href="../html/attraction_about.html">어트랙션 정보</a></li>
+                <li><a href="../html/sign_up.html">회원가입</a></li>
+                <li><a href="../html/log_in.html">로그인</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search" />
+            <button onclick="searchNow()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="signup_login">
+            <button class="animated-button-signup">
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text"><a href="sign_up.html">SING UP </a></span>
+              <span class="circle"></span>
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
+            <button class="animated-button-login">
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text"><a href="sign_up.html">LOG IN </a></span>
+              <span class="circle"></span>
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="ticket_i">
+      <div class="overlay"></div>
+      <div class="ticket-content">
+        <h2>최신 이벤트 안내</h2>
+        <p>다양한 이벤트와 공지사항을 통해 특별한 경험을 놓치지 마세요!</p>
+        <a href="../html/event_about.html">자세히 보기</a>
+      </div>
+    </section>
+ 
+    <section class="event-section">
+      <div class="event-content">
+        <h2>이벤트</h2>
+        <p>다양한 이벤트와 공지사항을 확인하고 특별한 순간을 놓치지 마세요!</p>
+        <div class="event-details">
+          <div class="event-image">
+            <img src="../img/main/event_poster 2.jpg" alt="Event Image" />
+          </div>
+          <div class="event-info">
+            <h3>아이랜드와 함께</h3>
+            <p class="event-date">2025년 5월 15일</p>
+            <p class="event-location">서울, 서울광장</p>
+            <p class="event-description">
+              이벤트에 대한 자세한 정보와 설명이 여기 들어갑니다. 날짜와 장소를
+              포함하여 qachon bulishi va qanday o’tishini bayon eting.
+            </p>
+            <a href="../html/event_about.html" class="event-link">이벤트 참여하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="category" onclick="showEvents('all')">모두</div>
+      <div class="category" onclick="showEvents('top')">TOP</div>
+      <div class="category" onclick="showEvents('performance')">공연</div>
+      <div class="category" onclick="showEvents('festival')">축제</div>
+    </section>
+
+    <section class="events" id="events">
+    </section>
+
+    <div id="wrap">
+      <section class="event-section_2">
+        <h2>이벤트</h2>
+        <p>다양한 이벤트를 확인하고 즐겨보세요!</p>
+        <div class="event-list_2">
+          <div class="event-item_2">
+            <img
+              src="../img/attraction/fly.jpg"
+              alt="Local Fun Fair"
+              class="event-img_2"
+            />
+            <div class="event-text_2">
+              <div class="event-date_2">
+                <div>5</div>
+                <div>10</div>
+              </div>
+              <div class="event-info_2">
+                <p>특별 공연</p>
+                <h3>서울</h3>
+                <p>시원하게 떠나는 특별한 공연의 세계로 초대합니다!</p>
+                <a href="../html/event_about.html">이벤트 보기></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-item_2">
+            <img
+              src="../img/attraction/mega.jpg"
+              alt="Come and Have Fun"
+              class="event-img_2"
+            />
+            <div class="event-text_2">
+              <div class="event-date_2">
+                <div>11</div>
+                <div>11</div>
+              </div>
+              <div class="event-info_2">
+                <p>가족 체험</p>
+                <h3>부산</h3>
+                <p>우아에서 가족과 함께 즐길 수 있는 체험 이벤트입니다!</p>
+                <a href="../html/event_about.html">이벤트 보기 ></a>
+              </div>
+            </div>
+          </div>
+          <div class="event-item_2">
+            <img
+              src="../img/attraction/charxpalak.jpg"
+              alt="Come and Have Fun"
+              class="event-img_2"
+            />
+            <div class="event-text_2">
+              <div class="event-date_2">
+                <div>11</div>
+                <div>11</div>
+              </div>
+              <div class="event-info_2">
+                <p>가족 체험</p>
+                <h3>부산</h3>
+                <p>우아에서 가족과 함께 즐길 수 있는 체험 이벤트입니다!</p>
+                <a href="../html/event_about.html">이벤트 보기 ></a>
+              </div>
+            </div>
+          </div>
+          <div class="event-item_2">
+            <img
+              src="../img/attraction/train.jpg"
+              alt="Come and Have Fun"
+              class="event-img_2"
+            />
+            <div class="event-text_2">
+              <div class="event-date_2">
+                <div>11</div>
+                <div>11</div>
+              </div>
+              <div class="event-info_2">
+                <p>가족 체험</p>
+                <h3>부산</h3>
+                <p>우아에서 가족과 함께 즐길 수 있는 체험 이벤트입니다!</p>
+                <a href="../html/event_about.html">이벤트 보기 ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn_allview">모든 보기</button>
+      </section>
+
+      <section class="blog-section_2">
+        <h2>최신 이벤트 소식</h2>
+        <p>우리의 최신 이벤트를 확인해보세요!</p>
+        <div class="blog-list_2">
+          <div class="blog-item_2">
+            <img
+              src="../img/attraction/house.jpg"
+              alt="가을 축제 일정 안내"
+              class="blog-img_2"
+            />
+            <div class="blog-info_2">
+              <p>이벤트</p>
+              <h3>가을 축제 일정 안내</h3>
+              <a href="../html/event_about.html">자세히 보기 ></a>
+            </div>
+          </div>
+
+          <div class="blog-item_2">
+            <img
+              src="../img/attraction/pirate.jpg"
+              alt="신규 체험 가입 이벤트"
+              class="blog-img_2"
+            />
+            <div class="blog-info_2">
+              <p>이벤트</p>
+              <h3>신규 체험 가입 이벤트</h3>
+              <a href="../html/event_about.html">자세히 보기 ></a>
+            </div>
+          </div>
+
+          <div class="blog-item_2">
+            <img
+              src="../img/attraction/rooles.jpg"
+              alt="여름 할인 프로모션"
+              class="blog-img_2"
+            />
+            <div class="blog-info_2">
+              <p>이벤트</p>
+              <h3>여름 할인 프로모션</h3>
+              <a href="../html/event_about.html">자세히 보기 ></a>
+            </div>
+          </div>
+        </div>
+        <button class="btn_allview">모든 보기</button>
+      </section>
+
+      <section class="event_gallery">
+        <h2>Event Gallery</h2>
+        <p>다양한 이벤트 사진을 확인하세요!</p>
+        <div class="event_images">
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/attraction/dragon.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/attraction/fly.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/attraction/train.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/main/main_attraction_main_boygirl.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/main/main_ticket_2.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="event_imgs">
+            <figure>
+              <img src="../img/main/main_attraction_horse.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <section class="footer-row">
+          <div class="footer-col">
+            <h1>
+              <a class="footer-brand" href="main.html">Ialand</a>
+            </h1>
+            <p>© 2025 ialand. 모든 권리 보유.</p>
+          </div>
+          <div class="footer-col">
+            <h4>고객센터</h4>
+            <p>
+              <strong>전화번호</strong>:
+              <span class="p-number">053-901-9292</span>
+            </p>
+            <p><strong>이메일</strong>: ialand@gmail.com</p>
+            <p><strong>주소</strong>: 대구광역시 동구 동대구로 102</p>
+            <p><strong>운영시간</strong>: 평일 10:00 ~ 21:00</p>
+            <p><strong>휴무</strong>: 주말 및 공휴일: 10~22:30</p>
+          </div>
+          <div class="footer-col">
+            <h4>회사 소개</h4>
+            <p>ialand 놀이공원</p>
+            <p><strong>사업자등록번호</strong>: 000-00-00000</p>
+            <p><strong>대표자명</strong>: Ale</p>
+          </div>
+          <div class="footer-col">
+            <h4>법적 고지</h4>
+            <p>개인정보처리방침</p>
+            <p>이용약관</p>
+            <label for="lang">언어 선택</label>
+            <select name="lang" id="lang" class="lang-select">
+              <option value="ko">한국어</option>
+              <option value="Eng">English</option>
+              <option value="Uz">Uzbek</option>
+            </select>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <button class="btn_top">TOP</button>
+  </body>
+</html>

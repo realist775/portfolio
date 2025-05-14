@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/77c31284a3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../script/main.js"></script>
+    <title>IALAND</title>
+  </head>
+  <body>
+    <header>
+      <a class="port-go" href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="container">
+        <div class="head">
+          <h1 class="logo"><a href="../html/main.html">Ialand</a></h1>
+
+          <nav class="nav-links" id="navMenu">
+            <a href="../html/ticket.html">티켓 & 예매</a>
+            <a href="../html/attraction.html">어트랙션 & 지도</a>
+            <a href="../html/event.html">이벤트 & 공지사항</a>
+
+            <div class="dropdown">
+              <button class="dropdown-toggle" onclick="toggleDropdown()">
+                고객센터 ▾
+              </button>
+              <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a href="../html/call_center.html">고객센터</a></li>
+                <li><a href="../html/ticket_option.html">티켓 옵션</a></li>
+                <li><a href="../html/event_about.html">이벤트 정보</a></li>
+                <li><a href="../html/attraction_about.html">어트랙션 정보</a></li>
+                <li><a href="../html/sign_up.html">회원가입</a></li>
+                <li><a href="../html/log_in.html">로그인</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="search-box">
+            <input type="search" id="searchInput" placeholder="Search" />
+            <button onclick="searchNow()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="signup_login">
+            <button class="animated-button-signup">
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text"><a href="sign_up.html">SING UP </a></span>
+              <span class="circle"></span>
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
+            <button class="animated-button-login">
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+              <span class="text"><a href="sign_up.html">LOG IN </a></span>
+              <span class="circle"></span>
+              <svg
+                viewBox="0 0 24 24"
+                class="arr-1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+              </svg>
+            </button>
+            <button class="menu-toggle" onclick="toggleMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="main_i">
+      <div class="main-content">
+        <h2>환영합니다! 최고의 경험이 기다리고 있습니다.</h2>
+        <p>
+          우리의 특별한 어트랙션과 이벤트를 통해 잊지 못할 추억을
+          만들어보세요.<br />여러분의 방문을 진심으로 환영합니다!
+        </p>
+        <button class="btn btn-white">자세히 보기</button>
+        <button class="btn btn-outline">참여하기</button>
+      </div>
+    </section>
+
+    <div id="wrap">
+      <section class="main_ticket">
+        <div class="main_ticket_text">
+          <p>편리함</p>
+          <h2>티켓 예매와 어트랙션 정보 <br> 한눈에</h2>
+          <p>
+            우리의 플랫폼은 쉽고 빠른 티켓 예매를 제공합니다. <br> 다양한 어트랙션
+            정보를 통해 고객님께 최상의 경험을 선사합니다.
+          </p>
+          <button class="btn btn-more">자세히 보기</button>
+          <button class="btn btn-involved">참여하기</button>
+        </div>
+        <div class="main_ticket_img">
+          <figure>
+            <img src="../img/main/main_ticket_2.jpg" alt="ticket2" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="main_alarm">
+        <div class="main_alarm_i">
+          <h2>최고의 경험을 제공합니다</h2>
+          <p>다양한 티켓 옵션을 확인해보세요!</p>
+        </div>
+        <div class="main_boxes">
+          <div class="main_box_1">
+            <h3>어트랙션을 만나보세요</h3>
+            <p>신나는 어트랙션이 여러분을 기다립니다</p>
+            <a href="attraction.html">자세히 보기</a>
+          </div>
+          <div class="main_box_2">
+            <h3>이벤트와 공지사항</h3>
+            <p>최신 이벤트 정보를 놓치지 마세요</p>
+            <a href="event.html">참여하기</a>
+          </div>
+          <div class="main_box_3">
+            <h3>고객센터와 소통하세요</h3>
+            <p>궁금한 사항은 언제든지 문의해주세요</p>
+            <a href="call_center.html">연락하기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit-section">
+        <div class="content">
+          <div class="text-box">
+            <h4 class="label">혜택</h4>
+            <h2 class="title">방문객을 위한 특별 혜택과 할인</h2>
+            <p class="description">
+              우리의 방문객은 다양한 혜택을 누릴 수 있습니다. 특별 할인과
+              이벤트로 더욱 즐거운 경험을 제공합니다.
+            </p>
+            <div class="info-box">
+              <div class="info-item">
+                <div class="logo">ialand</div>
+                <h3>특별 할인</h3>
+                <p>모든 방문객에게 제공되는 특별 할인 <br> 혜택을 확인하세요.</p>
+                <button class="btn-more-sale">자세히</button>
+              </div>
+              <div class="info-item">
+                <div class="logo">ialand</div>
+                <h3>이벤트 정보</h3>
+                <p>
+                  최신 이벤트와 프로모션 정보를 <br />
+                  놓치지 마세요.
+                </p>
+                <button class="btn-involved-sale">참여</button>
+              </div>
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="../img/main/main_banner.jpg" alt="banner" />
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket_about">
+        <h2>티켓 예매와 어트랙션 이용 방법을 안내합니다.</h2>
+        <div class="ticket_about_boxes">
+          <div class="ticket_about_box">
+            <h3>간편하게 티켓을 예매하고 어트랙션을 즐기세요.</h3>
+            <p>
+              우리의 시스템을 통해 쉽고 빠르게 티켓을 구매하고 어트랙션을 즐길
+              수 있습니다.
+            </p>
+            <a href="ticket.html">예매하기</a>
+          </div>
+          <div class="ticket_about_box">
+            <h3>어트랙션 이용 시 필요한 <br> 정보입니다.</h3>
+            <p>어트랙션 이용 방법과 주의사항을 <br> 확인하세요.</p>
+            <a href="attraction.html">이용하기</a>
+          </div>
+          <div class="ticket_about_box">
+            <h3>고객님의 편의를 위한 다양한 서비스가 <br> 준비되어 있습니다.</h3>
+            <p>
+              편리한 예매 시스템과 고객 지원 서비스를 통해 최고의 경험을
+              제공합니다.
+            </p>
+            <a href="call_center.html">문의하기</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket_start_main">
+        <div class="ticket_start_main_text">
+          <h2>티켓 예매를 시작하세요</h2>
+          <p>다양한 어트랙션과 이벤트를 경험해보세요.</p>
+        </div>
+        <div class="ticket_start_main_a">
+          <a href="ticket_option.html">예매하기</a>
+          <a href="ticket.html">더 알아보기</a>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter_text">
+          <h2>뉴스레터 구독으로 소식을 받아보세요</h2>
+          <p>최신 소식과 이벤트를 놓치지 마세요!</p>
+        </div>
+        <div class="newsletter_follow">
+          <input type="email" placeholder="이메일 입력해줴요" />
+          <button class="btn-btn-follow" type="submit">가입하기</button>
+          <p>구독함으로써 개인정보 보호정책에 동의합니다.</p>
+        </div>
+      </section>
+
+      <section class="main_call_about">
+        <div class="main_call_left">
+          <div class="main_call_inner">
+            <h6>연락처</h6>
+            <h2>문의하기</h2>
+            <p>고객센터에 문의하실 수 있습니다.</p>
+          </div>
+          <div class="main_call_center">
+            <div class="main_call_email">
+              <i class="fa-solid fa-envelope"></i>
+              <h4>이메일</h4>
+              <p>문의는 아래로</p>
+              <p><a href="call_center.html">ialand@gmail.com</a></p>
+            </div>
+            <div class="main_call_number">
+              <i class="fa-solid fa-phone"></i>
+              <h4>연락처</h4>
+              <p>빠른 문의 전화로</p>
+              <p>053-901-9292</p>
+            </div>
+            <div class="main_call_address">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4>주소</h4>
+              <p>대구광역시 북구 침산동 102</p>
+              <p><a href="call_center.html">길 찾기</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="main_call_img">
+          <figure>
+            <img src="../img/main/attraction 11.jpg" alt="" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="main_atmosphere_gallery">
+        <div class="main_atmosphere_text">
+          <h2>아일랜드 분위기</h2>
+          <p>다양한 어트랙션의 아름다운 순간을 감상하세요.</p>
+        </div>
+
+
+        <div class="gallery-row">
+          <div>
+            <img src="../img/main/main_attraction_horse.jpg" alt="회전목마" />
+          </div>
+          <div>
+            <img
+              src="../img/main/main_attraction 7.jpg"
+              alt="회전목마 아이들"
+            />
+          </div>
+        </div>
+
+
+        <div class="gallery-row">
+          <div>
+            <img src="../img/main/main_attraction 8.jpg" alt="야간 회전목마" />
+          </div>
+          <div>
+            <img
+              src="../img/main/main_attraction_main_boygirl.jpg"
+              alt="아이들 놀이기구"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="main_event">
+        <div class="main_event_inner">
+          <h2>이벤트</h2>
+          <p>다양한 이벤트를 확인하고 참여하세요!</p>
+        </div>
+
+        <div class="main_events">
+          <div class="main_event_left">
+            <figure>
+              <img src="../img/main/event poster1.jpg" alt="poster 1" />
+            </figure>
+            <h6>카테고리</h6>
+            <h3>특별 공연</h3>
+            <p class="address">대구</p>
+            <p>대구에서 열리는 특별한 공연에 여러분을 초대합니다!</p>
+            <a href="../html/event.html">이벤트 보기</a>
+          </div>
+
+          <div class="main_event_right">
+            <figure>
+              <img src="../img/main/event_poster 2.jpg" alt="poster 2" />
+            </figure>
+            <h6>카테고리</h6>
+            <h3>가족 할인</h3>
+            <p class="address">대구</p>
+            <p>대구에서 열리는 특별한 공연에 여러분을 초대합니다!</p>
+            <a href="../html/event.html">이벤트 보기</a>
+          </div>
+        </div>
+
+        <a href="../html/event.html">
+          <button class="animated-button">
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+            <span class="text">더 보기</span>
+            <span class="circle"></span>
+            <svg
+              viewBox="0 0 24 24"
+              class="arr-1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+              ></path>
+            </svg>
+          </button>
+        </a>
+      </section>
+
+      <section class="main_send_faq">
+        <div class="main_faq_inner">
+          <h2>연락처 문의</h2>
+          <p>추가 문의가 필요하신가요? 저희에게 연락하세요!</p>
+        </div>
+        <form>
+          <label for="name">이름</label><br />
+          <input type="text" id="name" name="name" /><br /><br />
+
+          <label for="email">이메일</label><br />
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="message">메시지</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="문의 내용 입력해주세요"
+          ></textarea
+          ><br /><br />
+
+          <button class="btn-btn-send" type="submit">제출</button>
+        </form>
+      </section>
+
+      <section class="our_team">
+        <div class="our_team_inner">
+          <h2>우리 팀</h2>
+          <p>전문가들이 모여 일합니다.</p>
+        </div>
+        <div class="our_members">
+          <div class="our_member">
+            <img src="../img/main/charecter 4.jpg" alt="김민수" />
+            <h3>김민수</h3>
+            <p>팀 리더</p>
+            <p>팀의 목표를 이끌며 방향을 수립합니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our_member">
+            <img src="../img/main/charecter  6.jpg" alt="이영희" />
+            <h3>이영희</h3>
+            <p>운영 담당</p>
+            <p>이벤트와의 협력을 통해 운영의 가치를 제공합니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our_member">
+            <img src="../img/main/charecter 3.jpg" alt="박수영" />
+            <h3>박수영</h3>
+            <p>운영 전략가</p>
+            <p>모든 고객이 원활한 흐름을 느낄 수 있도록 노력하고 있습니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our_member">
+            <img src="../img/main/charecter_1.jpg" alt="조예나" />
+            <h3>조예나</h3>
+            <p>마케팅 매니저</p>
+            <p>효과적인 마케팅 캠페인을 고안하고 추진합니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our_member">
+            <img src="../img/main/charecter 5.jpg" alt="최진우" />
+            <h3>최진우</h3>
+            <p>운영 관리자</p>
+            <p>팀의 운영을 체계적으로 지원합니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="our_member">
+            <img src="../img/main/charecter 2.jpg" alt="Alisa" />
+            <h3>Alisa</h3>
+            <p>이벤트 관리자</p>
+            <p>고객의 만족을 함께 책임지겠습니다.</p>
+            <div class="sns_mail">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <section class="footer-row">
+          <div class="footer-col">
+            <h2>
+              <a class="footer-brand" href="main.html">Ialand</a>
+            </h2>
+            <p>© 2025 ialand. 모든 권리 보유.</p>
+          </div>
+          <div class="footer-col">
+            <h4>고객센터</h4>
+            <p>
+              <strong>전화번호</strong>:
+              <span class="p-number">053-901-9292</span>
+            </p>
+            <p><strong>이메일</strong>: ialand@gmail.com</p>
+            <p><strong>주소</strong>: 대구광역시 동구 동대구로 102</p>
+            <p><strong>운영시간</strong>: 평일 10:00 ~ 21:00</p>
+            <p><strong>휴무</strong>: 주말 및 공휴일: 10~22:30</p>
+          </div>
+          <div class="footer-col">
+            <h4>회사 소개</h4>
+            <p>ialand 놀이공원</p>
+            <p><strong>사업자등록번호</strong>: 000-00-00000</p>
+            <p><strong>대표자명</strong>: Ale</p>
+          </div>
+          <div class="footer-col">
+            <h4>법적 고지</h4>
+            <p>개인정보처리방침</p>
+            <p>이용약관</p>
+            <label for="lang">언어 선택</label>
+            <select name="lang" id="lang" class="lang-select">
+              <option value="ko">한국어</option>
+              <option value="Eng">English</option>
+              <option value="Uz">Uzbek</option>
+            </select>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <button class="btn_top">TOP</button>
+  </body>
+</html>
